@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Roboto";
+    src: url('./font/FunnelSans-VariableFont_wght.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100 900;
+    font-stretch: 75% 100%;
+    font-display: swap;
+}
+
+.line {
+    background-color: black;
+    width: 100%;
+    height: 1px;
+    margin: 1px 0;
+}
+
