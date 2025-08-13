@@ -12,7 +12,7 @@
     <script src="./script.js" defer></script>
 </head>
 
-<body>
+<body onload="booksRender()">
     <header>
         <section>
             <div class="logo">
@@ -44,14 +44,7 @@
     </header>
 
     <main>
-            <object class="object">
-                <h2>Die Geheimnisse des Ozeans</h2>
-                <img src="./img/Book.png" alt="">
-                <div>
-                    <h3>19,99 €</h3>
-                    <h3>1249</h3>
-                </div>
-            </object>
+        <div id="content" class="content"></div>
     </main>
 
     <footer>

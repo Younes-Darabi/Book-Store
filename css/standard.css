@@ -1,11 +1,16 @@
 @font-face {
-    font-family: "Roboto";
-    src: url('./font/FunnelSans-VariableFont_wght.ttf') format('truetype');
+    font-family: 'Funnel Sans';
+    src: url('../font/FunnelSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
-    font-weight: 100 900;
-    font-stretch: 75% 100%;
-    font-display: swap;
 }
+
+@font-face {
+    font-family: 'Roboto Flex';
+    src: url('../font/RobotoFlex-VariableFont_GRAD.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+} 
 
 .line {
     background-color: black;
@@ -13,4 +18,11 @@
     height: 1px;
     margin: 1px 0;
 }
+.line2 {
+    background-color: #e2e1e1b9;
+    width: 95%;
+    height: 1px;
+    margin: 10px 0;
+}
+
 
