@@ -28,7 +28,8 @@ let books = [
         "name": "NovelLover",
         "comment": "Ein Buch, das voller magischer Überraschungen steckt und mich begeistert hat."
       }
-    ]
+    ],
+    "favorite": false
   },
   {
     "name": "Der vergessene Pfad",
@@ -38,7 +39,8 @@ let books = [
     "price": 14.50,
     "publishedYear": 2021,
     "genre": "Fantasy",
-    "comments": []
+    "comments": [],
+    "favorite": true
   },
   {
     "name": "Die Farben des Himmels",
@@ -69,7 +71,8 @@ let books = [
         "name": "ReadingAddict",
         "comment": "Ein unvergessliches Buch, das mich auf eine magische Reise mitgenommen hat."
       }
-    ]
+    ],
+    "favorite": false
   },
   {
     "name": "Das Rätsel der Zeit",
@@ -88,7 +91,8 @@ let books = [
         "name": "LeseWurm",
         "comment": "Die Liebesgeschichte war herzergreifend und wunderschön geschrieben."
       }
-    ]
+    ],
+    "favorite": false
   },
   {
     "name": "Der letzte Wächter",
@@ -98,7 +102,8 @@ let books = [
     "price": 16.75,
     "publishedYear": 2017,
     "genre": "Fantasy",
-    "comments": []
+    "comments": [],
+    "favorite": false
   },
   {
     "name": "Im Schatten des Mondes",
@@ -117,7 +122,8 @@ let books = [
         "name": "Leseratte",
         "comment": "Ein packender Science-Fiction-Roman, der mich zum Nachdenken gebracht hat."
       }
-    ]
+    ],
+    "favorite": false
   },
   {
     "name": "Jenseits der Sterne",
@@ -132,7 +138,8 @@ let books = [
         "name": "Leser123",
         "comment": "Ein fesselndes Abenteuer, das mich von Anfang bis Ende mitgerissen hat."
       }
-    ]
+    ],
+    "favorite": false
   },
   {
     "name": "Das verborgene Königreich",
@@ -147,7 +154,8 @@ let books = [
         "name": "Bookworm92",
         "comment": "Ein faszinierendes Buch, das mich von der ersten Seite an gefesselt hat."
       }
-    ]
+    ],
+    "favorite": false
   },
   {
     "name": "Liebe in Zeiten des Krieges",
@@ -170,7 +178,8 @@ let books = [
         "name": "SciFiExplorer",
         "comment": "Spannende Zukunftsvisionen und interessante Charaktere machten diesen Roman einzigartig."
       }
-    ]
+    ],
+    "favorite": false
   }
 ]
 
@@ -180,10 +189,11 @@ function booksRender() {
   for (let i = 0; i < books.length; i++) {
     output.innerHTML += `
     <object class="object">
-        <h2>${books[i].name}</h2>
+
         <div class="book_img">
-          <img src="./img/Book3.png" alt="Buch">
+          <img src="./img/th.jpeg" alt="Buch">
         </div>
+        <h2>${books[i].name}</h2>
         <div class="price_like">
           <h3>${books[i].price} €</h3>
           ${bookLikeRender(i)}
@@ -194,8 +204,48 @@ function booksRender() {
             <h4>Kommentare:</h4>
             ${bookCommentsRender(i)}
         </div>
+      <div class="send_comment">
+        ${bookFavoritenRender(i)}
+        <input id="comment_text_${i}" class="comment_text" " type="text">
+        <img onclick="SendComment(${i})" class="send_comment_img" src="./img/icon/Sent.png">
+      </div>
     </object>
     `;
+  }
+}
+
+function bookFavoritenRender(i) {
+  let favImgSrc = "";
+  if (books[i].favorite == false) {
+    favImgSrc = "./img/icon/Star1.png";
+  } else {
+    favImgSrc = "./img/icon/Star2.png"
+  }
+  return `<div>
+            <img class="favorite_icon" onclick="bookFavoritenCounter(${i})" src="${favImgSrc}" alt="Star">
+          </div>`
+}
+
+function bookFavoritenCounter(i) {
+  if (books[i].favorite == false) {
+    books[i].favorite = true;
+  } else {
+    books[i].favorite = false;
+  }
+  booksRender();
+}
+
+function SendComment(i) {
+  let comment = document.getElementById(`comment_text_${i}`).value;
+  if (comment) {
+    books[i].comments.push({
+      "name": "Younes",
+      "comment": comment
+    });
+    comment.value = "";
+    booksRender();
+  } else {
+    alert("ERROR");
   }
 }
 
