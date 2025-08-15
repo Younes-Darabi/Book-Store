@@ -4,46 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Store</title>
+    <title>Favoriten</title>
 
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/standard.css">
 
-    <script src="/assets/script/script.js" defer></script>
+    <script src="/assets/script/Fovorites.js" defer></script>
 </head>
 
-<body onload="booksRender()">
+<body onload="booksFovoritesRender()">
     <header>
         <section>
+            <nav>
+                <ul>
+                    <a href="/index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="/html/contact.html">
+                        <li>Kontakt</li>
+                    </a>
+                </ul>
+            </nav>
             <div class="logo">
-                <a href="/index.html"><img src="/assets/img/icon/bookstore-icon.jpg" alt="Book store icon"
-                        width="60px"></a>
+                <a href="/index.html"><img src="/assets/img/icon/bookstore-icon.jpg" alt="Book store icon" width="60px"></a>
                 <a href="/index.html">
                     <h1>Book Store</h1>
                 </a>
             </div>
-            <div class="menu">
-                
-                <nav>
-                    <ul>
-                        <a href="/index.html">
-                            <li>Home</li>
-                        </a>
-                        <a href="/html/contact.html">
-                            <li>Kontakt</li>
-                        </a>
-                    </ul>
-                </nav>
+            <nav>
+                <ul>
+                    <a href="/html/favorites.html">
+                        <li>Favoriten</li>
+                    </a>
+                </ul>
+            </nav>
 
-                <nav>
-                    <ul>
-                        <a href="/html/favorites.html">
-                            <li>Favoriten</li>
-                        </a>
-                    </ul>
-                </nav>
-
-            </div>
         </section>
         <div class="line"></div>
         <div class="line"></div>
@@ -58,7 +53,7 @@
         <section>
             <p>© Alle Rechte vorbehalten. Diese Website gehört und wird betrieben von Book Store.</p>
 
-            <div class="datenschutz_impressum">
+            <div class="social_media">
                 <a href="/html/datenschutz.html">
                     <p>Datenschutz</p>
                 </a>
