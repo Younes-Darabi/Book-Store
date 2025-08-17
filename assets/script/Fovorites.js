@@ -9,7 +9,7 @@ function booksFovoritesRender() {
       <object class="object">
 
         <div class="book_img">
-          <img src="/assets/img/th.jpeg" alt="Buch">
+          <img src="../assets/img/th.jpeg" alt="Buch">
         </div>
         <h2>${books[i].name}</h2>
         <div class="price_like">
@@ -25,7 +25,7 @@ function booksFovoritesRender() {
         <div class="send_comment">
           ${bookFavoritesRender(i)}
           <input id="comment_text_${i}" class="comment_text" " type="text">
-          <img onclick="SendComment(${i})" class="send_comment_img" src="/assets/img/icon/Sent.png">
+          <img onclick="SendComment(${i})" class="send_comment_img" src="../assets/img/icon/Sent.png">
         </div>
       </object>
     `;
@@ -34,14 +34,12 @@ function booksFovoritesRender() {
   localStorage.setItem("books", JSON.stringify(books));
 }
 
-
-
 function bookFavoritesRender(i) {
   let favImgSrc = "";
   if (books[i].favorite == false) {
-    favImgSrc = "/assets/img/icon/Star1.png";
+    favImgSrc = "../assets/img/icon/Star1.png";
   } else {
-    favImgSrc = "/assets/img/icon/Star2.png";
+    favImgSrc = "../assets/img/icon/Star2.png";
   }
   return `<div>
             <img class="favorite_icon" onclick="bookFavoritesCounter(${i})" src="${favImgSrc}" alt="Star">
@@ -67,14 +65,14 @@ function SendComment(i) {
     comment.value = "";
     booksFovoritesRender();
   } else {
-    alert("ERROR");
+    alert("Bitte geben Sie Ihre Nachricht ein");
   }
 }
 
 function bookLikeRender(i) {
-  let likeImgSrc = "/assets/img/icon/like2.png";
+  let likeImgSrc = "../assets/img/icon/Like2.png";
   if (books[i].liked == false) {
-    likeImgSrc = "/assets/img/icon/like.png";
+    likeImgSrc = "../assets/img/icon/Like.png";
   }
   return `<div class="like">
             <h3>${books[i].likes}</h3>

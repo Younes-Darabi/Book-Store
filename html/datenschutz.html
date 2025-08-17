@@ -4,64 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Datenschutzerklärung: Erfahren Sie, wie wir mit Ihren Daten umgehen und Ihre Privatsphäre schützen.">
+
     <title>Datenschutz</title>
 
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/standard.css">
+    <link rel="icon" href="../assets/img/icon/fav.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/standard.css">
 
-    <script src="/assets/script/script.js" defer></script>
+    <script src="../assets/script/script.js" defer></script>
 </head>
 
 <body onload="booksRender()">
     <header>
         <section>
-            <nav>
+            <a class="logo" href="../index.html">
+                <img src="../assets/img/icon/bookstore-icon.jpg" alt="Book Store Logo" width="60px">
+                <h1>Book Store</h1>
+            </a>
+            <nav class="menu">
                 <ul>
-                    <a href="/index.html">
+                    <a href="../index.html">
                         <li>Home</li>
                     </a>
-                    <a href="/html/contact.html">
-                        <li>Kontakt</li>
-                    </a>
                 </ul>
-            </nav>
-            <div class="logo">
-                <a href="/index.html"><img src="/assets/img/icon/bookstore-icon.jpg" alt="Book store icon" width="60px"></a>
-                <a href="/index.html">
-                    <h1>Book Store</h1>
-                </a>
-            </div>
-            <nav>
                 <ul>
-                    <a href="/html/favorites.html">
+                    <a href="../html/favorites.html">
                         <li>Favoriten</li>
                     </a>
                 </ul>
             </nav>
-
         </section>
         <div class="line"></div>
         <div class="line"></div>
     </header>
 
     <main>
-    </main>
+        <h2>Datenschutzerklärung:</h2>
+        <p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Wir verarbeiten Ihre Daten ausschließlich auf Grundlage
+            der gesetzlichen Bestimmungen (DSGVO, TMG).</p><br>
 
+        <h4>1. Verantwortlicher</h4><br>
+        <p>Younes Darabi<br>
+            Musterstraße 123<br>
+            12345 Musterstadt<br>
+            E-Mail: kontakt@example.de</p><br>
+
+        <h4>2. Erhebung und Verarbeitung von Daten</h4>
+        <p>Beim Besuch dieser Website werden automatisch Informationen (z. B. IP-Adresse, Browsertyp) erfasst. Diese
+            Daten dienen ausschließlich der technischen Sicherheit und werden nicht zur Identifizierung verwendet.</p>
+        <br>
+
+        <h4>3. Kontaktaufnahme</h4>
+        <p>Wenn Sie uns per E-Mail kontaktieren, speichern wir Ihre Angaben zur Bearbeitung der Anfrage. Diese Daten
+            geben wir nicht ohne Ihre Einwilligung weiter.</p><br>
+
+        <h4>4. Ihre Rechte</h4>
+        <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch.
+            Kontaktieren Sie uns dazu per E-Mail.</p><br>
+
+        <h4>5.Änderungen </h4>
+        <p>Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf zu aktualisieren.</p><br>
+
+        <p>Stand: August 2025</p>
+    </main>
 
     <footer>
         <div class="line"></div>
         <section>
             <p>© Alle Rechte vorbehalten. Diese Website gehört und wird betrieben von Book Store.</p>
 
-            <div class="social_media">
-                <a href="/html/datenschutz.html">
-                    <p>Datenschutz</p>
-                </a>
-                <a href="/html/impressum.html">
-                    <p>Impressum</p>
-                </a>
-            </div>
+            <nav>
+                <ul class="datenschutz_impressum">
+                    <li><a href="../html/datenschutz.html">Datenschutz</a></li>
+                    <li><a href="../html/impressum.html">Impressum</a></li>
+                </ul>
+            </nav>
         </section>
     </footer>
 </body>
+
 </html>

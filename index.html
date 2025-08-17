@@ -4,48 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/img/icon/fav.png">
+    <meta name="description"
+        content="Book Store: Bücher entdecken, suchen und zu Favoriten hinzufügen. Barrierearme Website mit Tastatur-Navigation.">
 
-    <title>Book Store</title>
+    <title>Book Store – Startseite</title>
 
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/standard.css">
+    <link rel="icon" href="./assets/img/icon/fav.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/standard.css">
 
-    <script src="/assets/script/script.js" defer></script>
+    <script src="./assets/script/script.js" defer></script>
 </head>
 
 <body onload="booksRender()">
     <header>
         <section>
-            <div class="logo">
-                <a href="/index.html"><img src="/assets/img/icon/bookstore-icon.jpg" alt="Book store icon"
-                        width="60px"></a>
-                <a href="/index.html">
-                    <h1>Book Store</h1>
-                </a>
-            </div>
-            <div class="menu">
-                
-                <nav>
-                    <ul>
-                        <a href="/index.html">
-                            <li>Home</li>
-                        </a>
-                        <a href="/html/contact.html">
-                            <li>Kontakt</li>
-                        </a>
-                    </ul>
-                </nav>
-
-                <nav>
-                    <ul>
-                        <a href="/html/favorites.html">
-                            <li>Favoriten</li>
-                        </a>
-                    </ul>
-                </nav>
-
-            </div>
+            <a class="logo" href="./index.html">
+                <img src="./assets/img/icon/bookstore-icon.jpg" alt="Book Store Logo" width="60px">
+                <h1>Book Store</h1>
+            </a>
+            <nav class="menu">
+                <ul>
+                    <a href="./index.html">
+                        <li>Home</li>
+                    </a>
+                </ul>
+                <ul>
+                    <a href="./html/favorites.html">
+                        <li>Favoriten</li>
+                    </a>
+                </ul>
+            </nav>
         </section>
         <div class="line"></div>
         <div class="line"></div>
@@ -60,14 +49,12 @@
         <section>
             <p>© Alle Rechte vorbehalten. Diese Website gehört und wird betrieben von Book Store.</p>
 
-            <div class="datenschutz_impressum">
-                <a href="/html/datenschutz.html">
-                    <p>Datenschutz</p>
-                </a>
-                <a href="/html/impressum.html">
-                    <p>Impressum</p>
-                </a>
-            </div>
+            <nav>
+                <ul class="datenschutz_impressum">
+                    <li><a href="./html/datenschutz.html">Datenschutz</a></li>
+                    <li><a href="./html/impressum.html">Impressum</a></li>
+                </ul>
+            </nav>
         </section>
     </footer>
 </body>

@@ -211,9 +211,9 @@ footer {
 }
 
 footer section {
-    margin-top: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: end;
 }
 
 .datenschutz_impressum {
@@ -221,6 +221,14 @@ footer section {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    
+}
+
+.datenschutz_impressum a{
+    font-size: 14px;
+    margin: 3px 0;
+    font-weight: 500;
+    color: #686767
 }
 
 /* ---Responsiv */
