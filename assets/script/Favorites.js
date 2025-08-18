@@ -1,15 +1,18 @@
 let books = JSON.parse(localStorage.getItem("books"));
+if (!books) {
+  books = defaultbooks;
+}
 
-function booksFovoritesRender() {
+function booksFavoritesRender() {
   let output = document.getElementById('content');
   output.innerHTML = "";
   for (let i = 0; i < books.length; i++) {
     if (books[i].favorite == true) {
       output.innerHTML += `
-      <object class="object">
+      <article class="article">
 
         <div class="book_img">
-          <img src="../assets/img/th.jpeg" alt="Buch">
+          <img src="../assets/img/${books[i].name}.jpg" alt="Buch">
         </div>
         <h2>${books[i].name}</h2>
         <div class="price_like">
@@ -25,9 +28,11 @@ function booksFovoritesRender() {
         <div class="send_comment">
           ${bookFavoritesRender(i)}
           <input id="comment_text_${i}" class="comment_text" " type="text">
-          <img onclick="SendComment(${i})" class="send_comment_img" src="../assets/img/icon/Sent.png">
+          <button class="btn_img" onclick="SendComment(${i})">
+            <img src="../assets/img/icon/Sent.png" alt="send Icon" width="25px">
+          </button>
         </div>
-      </object>
+      </article>
     `;
     }
   }
@@ -42,7 +47,9 @@ function bookFavoritesRender(i) {
     favImgSrc = "../assets/img/icon/Star2.png";
   }
   return `<div>
-            <img class="favorite_icon" onclick="bookFavoritesCounter(${i})" src="${favImgSrc}" alt="Star">
+            <button class="btn_img" onclick="bookFavoritesCounter(${i})">
+              <img src="${favImgSrc}" alt="Star Icon" width="25px">
+            </button>
           </div>`;
 }
 
@@ -52,7 +59,7 @@ function bookFavoritesCounter(i) {
   } else {
     books[i].favorite = false;
   }
-  booksFovoritesRender();
+  booksFavoritesRender();
 }
 
 function SendComment(i) {
@@ -63,7 +70,7 @@ function SendComment(i) {
       comment: comment,
     });
     comment.value = "";
-    booksFovoritesRender();
+    booksFavoritesRender();
   } else {
     alert("Bitte geben Sie Ihre Nachricht ein");
   }
@@ -76,8 +83,10 @@ function bookLikeRender(i) {
   }
   return `<div class="like">
             <h3>${books[i].likes}</h3>
-            <img onclick="bookLikeCounter(${i})" src="${likeImgSrc}" width="25px" alt="Like">
-         </div>`;
+            <button class="btn_img" onclick="bookLikeCounter(${i})">
+              <img src="${likeImgSrc}" alt="Like Icon" width="25px">
+            </button>
+          </div>`;
 }
 
 function bookLikeCounter(i) {
@@ -88,7 +97,7 @@ function bookLikeCounter(i) {
     books[i].liked = false;
     books[i].likes--;
   }
-  booksFovoritesRender();
+  booksFavoritesRender();
 }
 
 function bookDetailRender(i) {

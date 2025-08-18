@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Impressum: Angaben gemäß § 5 TMG und Kontaktinformationen zum Betreiber dieser Website.">
+
+    <title>Buchverwaltung</title>
+
+    <link rel="icon" href="../assets/img/icon/fav.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/standard.css">
+    <link rel="stylesheet" href="../assets/css/book-managmement.css">
+
+    <script src="../assets/script/script.js" defer></script>
+    <script src="../assets/script/book-management.js" defer></script>
+</head>
+
+<body onload="bookManagementRender()">
+    <div class="body_div">
+        <header>
+            <section>
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../assets/img/icon/bookstore-icon.jpg" alt="Book Store Logo" width="60px">
+                        <h1>Book Store</h1>
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../html/favorites.html">Favoriten</a></li>
+                    </ul>
+                    <ul>
+                        
+                        <li><a href="../html/book-management.html"><img src="../assets/img/icon/OIP.webp" alt="Management Logo" width="22px"></a></li>
+                    </ul>
+                </nav>
+            </section>
+            <div class="line"></div>
+            <div class="line"></div>
+        </header>
+
+        <main>
+            <section>
+                <h2>Liste der Bücher:</h2>
+                <ul>
+                    <li class="list_title">
+                        <span>Buchtitel</span>
+                        <span>Autor</span>
+                        <span>E-jahr</span>
+                        <span>Genre</span>
+                        <span>Preis(€)</span>
+                        <span>likes</span>
+                        <span>löschen</span>
+                        <span>Bearbeiten</span>
+                    </li>
+                </ul>
+                <ul id="list_of_books"></ul>
+            </section>
+            <section class="sec_add_edit">
+
+                <div class="book_add">
+                    <h2>Neues Buch hinzufügen:</h2>
+                    <form>
+
+                        <label for="book_name">Buchtitel:</label>
+                        <input id="book_name" type="text">
+
+                        <label for="book_author">Autor:</label>
+                        <input id="book_author" type="text">
+
+                        <label for="book_publishedYear">E-jahr:</label>
+                        <input id="book_publishedYear" type="text">
+
+                        <label for="book_genre">Genre:</label>
+                        <input id="book_genre" type="text">
+
+                        <label for="book_price">Preis(€):</label>
+                        <input id="book_price" type="text">
+
+                        <div class="div_btn">
+                            <button class="btn_add" onclick="addNewBook()">hinzufügen</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="book_edit">
+                    <h2>Buchbearbeitung:</h2>
+
+                    <form>
+
+                        <label for="edit_book_name">Buchtitel:</label>
+                        <input id="edit_book_name" type="text">
+
+                        <label for="edit_book_author">Autor:</label>
+                        <input id="edit_book_author" type="text">
+
+                        <label for="edit_book_publishedYear">E-jahr:</label>
+                        <input id="edit_book_publishedYear" type="text">
+
+                        <label for="edit_book_genre">Genre:</label>
+                        <input id="edit_book_genre" type="text">
+
+                        <label for="edit_book_price">Preis(€):</label>
+                        <input id="edit_book_price" type="text">
+
+                        <div class="div_btn">
+                            <button class="btn_add" onclick="editBook()">Bearbeiten</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <div class="line"></div>
+            <section>
+                <p>© Alle Rechte vorbehalten. Diese Website gehört und wird betrieben von Book Store.</p>
+
+                <nav>
+                    <ul class="datenschutz_impressum">
+                        <li><a href="../html/datenschutz.html">Datenschutz</a></li>
+                        <li><a href="../html/impressum.html">Impressum</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </footer>
+    </div>
+</body>
+
+</html>

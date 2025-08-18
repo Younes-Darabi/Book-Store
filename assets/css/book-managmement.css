@@ -1,0 +1,80 @@
+h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}
+
+input{
+    height: 20px;
+    border: 1px solid rgb(187, 100, 100);
+    border-radius: 3px;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.list_title {
+    font-weight: 600;
+}
+
+main ul {
+    padding-left: 5px;
+}
+
+main li {
+    display: grid;
+    grid-template-columns: 250px 200px 80px 150px 90px 100px 100px 50px;
+    align-items: center;
+}
+
+main section {
+    background-color: #efefef75;
+    padding: 10px 20px 20px 20px;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.sec_add_edit {
+    display: flex;
+    gap: 20px;
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+.book_add {
+    margin-top: 10px;
+    width: 50%;
+    background-color: lightcoral;
+    padding: 10px 20px 20px 20px;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.book_edit {
+    margin-top: 10px;
+    width: 50%;
+    background-color: lightgreen;
+    padding: 10px 20px 20px 20px;
+    border-radius: 5px;
+}
+
+.btn_add{
+    margin-top: 5px;
+    padding: 5px 20px;
+}
+
+.div_btn{
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+
+.div_search{
+ 
+}

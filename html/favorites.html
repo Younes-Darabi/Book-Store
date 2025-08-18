@@ -12,50 +12,53 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/standard.css">
 
-    <script src="../assets/script/Fovorites.js" defer></script>
+    <script src="../assets/script/Favorites.js" defer></script>
 </head>
 
-<body onload="booksFovoritesRender()">
-    <header>
-        <section>
-            <a class="logo" href="../index.html">
-                <img src="../assets/img/icon/bookstore-icon.jpg" alt="Book Store Logo" width="60px">
-                <h1>Book Store</h1>
-            </a>
-            <nav class="menu">
-                <ul>
+<body onload="booksFavoritesRender()">
+    <div class="body_div">
+         <header>
+            <section>
+                <div class="logo">
                     <a href="../index.html">
-                        <li>Home</li>
+                        <img src="../assets/img/icon/bookstore-icon.jpg" alt="Book Store Logo" width="60px">
+                        <h1>Book Store</h1>
                     </a>
-                </ul>
-                <ul>
-                    <a href="../html/favorites.html">
-                        <li>Favoriten</li>
-                    </a>
-                </ul>
-            </nav>
-        </section>
-        <div class="line"></div>
-        <div class="line"></div>
-    </header>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../html/favorites.html">Favoriten</a></li>
+                    </ul>
+                    <ul>
+                        
+                        <li><a href="../html/book-management.html"><img src="../assets/img/icon/OIP.webp" alt="Management Logo" width="22px"></a></li>
+                    </ul>
+                </nav>
+            </section>
+            <div class="line"></div>
+            <div class="line"></div>
+        </header>
 
-    <main>
-        <div id="content" class="content"></div>
-    </main>
 
-    <footer>
-        <div class="line"></div>
-        <section>
-            <p>© Alle Rechte vorbehalten. Diese Website gehört und wird betrieben von Book Store.</p>
+        <main>
+            <div id="content" class="content"></div>
+        </main>
 
-            <nav>
-                <ul class="datenschutz_impressum">
-                    <li><a href="../html/datenschutz.html">Datenschutz</a></li>
-                    <li><a href="../html/impressum.html">Impressum</a></li>
-                </ul>
-            </nav>
-        </section>
-    </footer>
+        <footer>
+            <div class="line"></div>
+            <section>
+                <p>© Alle Rechte vorbehalten. Diese Website gehört und wird betrieben von Book Store.</p>
+
+                <nav>
+                    <ul class="datenschutz_impressum">
+                        <li><a href="../html/datenschutz.html">Datenschutz</a></li>
+                        <li><a href="../html/impressum.html">Impressum</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </footer>
+    </div>
 </body>
 
 </html>

@@ -2,13 +2,33 @@ body {
     margin: 0;
     background-color: #FCFCFA;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     color: black;
     font-size: 16px;
     font-family: "Roboto Flex", sans-serif;
-    max-width: 1920px;
     min-height: 100vh
+}
+
+.body_div {
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    min-height: 100vh;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
 a {
@@ -16,13 +36,15 @@ a {
     text-decoration: none;
     color: black;
 }
+
 /* ---Header */
+
 header {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 65%;
+    min-width: 100%;
 }
 
 header section {
@@ -30,12 +52,11 @@ header section {
 }
 
 .menu {
-
     display: flex;
     justify-content: space-between;
 }
 
-ul {
+.menu ul {
     list-style: none;
     display: flex;
     gap: 10px;
@@ -45,8 +66,11 @@ ul {
 
 .logo {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+.logo a{
+    text-align: center;
 }
 
 h1 {
@@ -55,17 +79,18 @@ h1 {
 }
 
 /* ---Main */
+
 main {
     flex: 1;
     justify-content: center;
     align-items: center;
     margin: 30px 0;
-    width: 65%;
+    width: 100%;
 }
 
 .content {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 13px;
 }
@@ -75,8 +100,9 @@ main {
     justify-content: center;
 }
 
-/* ---object */
-.object {
+/* ---article */
+
+.article {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -96,29 +122,30 @@ h2 {
 
 h3 {
     font-size: 16px;
-    color: rgb(248, 57, 57);
+    color: rgb(200, 0, 0);
     font-weight: 600;
 }
 
 h4 {
     font-size: 15px;
-    margin: 3px 0;
+    margin: 0;
     font-weight: 600;
     color: #242424
 }
 
 .book_img img {
-    width: 250px;
-    object-fit: center;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 3px;
 }
 
 .book_img {
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 90%;
-    height: 170px;
-    border-radius: 3px;
 }
 
 .price_like {
@@ -139,16 +166,15 @@ h4 {
     cursor: pointer;
 }
 
-.book_detail_in {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-}
-
 .book_detail {
     width: 90%;
-    display: flex;
-    gap: 5px;
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 8px;
+}
+
+.book_detail_in {
+    display: contents;
 }
 
 .book_comments {
@@ -191,22 +217,21 @@ p {
     height: 20px;
 }
 
-.send_comment_img {
-    width: 22px;
-    cursor: pointer;
-}
-
-.favorite_icon {
-    width: 25px;
-    cursor: pointer;
+.btn_img {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
 }
 
 /* ---Footer */
+
 footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 65%;
+    width: 100%;
     margin-bottom: 30px;
 }
 
@@ -217,14 +242,15 @@ footer section {
 }
 
 .datenschutz_impressum {
+    list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    
+
 }
 
-.datenschutz_impressum a{
+.datenschutz_impressum a {
     font-size: 14px;
     margin: 3px 0;
     font-weight: 500;
@@ -232,49 +258,31 @@ footer section {
 }
 
 /* ---Responsiv */
+
 @media(max-width:1100px) {
 
     /* ---Footer */
+
     footer section {
         flex-direction: column;
         align-items: center;
     }
+
     footer section p {
         text-align: center;
     }
+
 }
 
 @media(max-width:768px) {
-
-    /* ---Header */
-    header {
+    .body_div {
         min-width: 90%;
     }
-
-    /* ---Main */
-    main {
-        width: 90%;
-    }
-
-    /* ---Footer */
-    footer {
-        width: 90%;
-    }
 }
+
 @media(max-width:1200px) {
 
-    /* ---Header */
-    header {
-        min-width: 80%;
-    }
-
-    /* ---Main */
-    main {
-        width: 80%;
-    }
-
-    /* ---Footer */
-    footer {
+    .body_div {
         width: 80%;
     }
 }

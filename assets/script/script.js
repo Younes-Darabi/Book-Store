@@ -202,8 +202,8 @@ let defaultbooks = [
   },
 ];
 let books = JSON.parse(localStorage.getItem("books"));
-if (!books){
-  books=defaultbooks;
+if (!books) {
+  books = defaultbooks;
 }
 
 function booksRender() {
@@ -211,9 +211,9 @@ function booksRender() {
   output.innerHTML = "";
   for (let i = 0; i < books.length; i++) {
     output.innerHTML += `
-    <object class="object">
+    <article class="article">
       <div class="book_img">
-        <img src="./assets/img/th.jpeg" alt="Buch">
+        <img src="./assets/img/${books[i].name}.jpg" alt="Buch">
       </div>
       <h2>${books[i].name}</h2>
       <div class="price_like">
@@ -221,17 +221,20 @@ function booksRender() {
         ${bookLikeRender(i)}
       </div>
         ${bookDetailRender(i)}
-      <div class="line2"></div> 
+      <div class="line2"></div>
       <div class="book_comments">
         <h4>Kommentare:</h4>
         ${bookCommentsRender(i)}
       </div>
       <div class="send_comment">
         ${bookFavoritesRender(i)}
-        <input id="comment_text_${i}" class="comment_text" " type="text">
-        <img onclick="SendComment(${i})" class="send_comment_img" src="./assets/img/icon/Sent.png">
+        <label for="comment_text_${i}" class="sr-only">Nachricht</label>
+        <input id="comment_text_${i}" class="comment_text" type="text" placeholder="Nachricht eingeben">
+        <button class="btn_img" onclick="SendComment(${i})">
+          <img src="./assets/img/icon/Sent.png" alt="send Icon" width="25px">
+        </button>
       </div>
-    </object>
+    </article>
     `;
   }
   localStorage.setItem("books", JSON.stringify(books));
@@ -245,7 +248,9 @@ function bookFavoritesRender(i) {
     favImgSrc = "./assets/img/icon/Star2.png";
   }
   return `<div>
-            <img class="favorite_icon" onclick="bookFavoritesCounter(${i})" src="${favImgSrc}" alt="Star">
+            <button class="btn_img" onclick="bookFavoritesCounter(${i})">
+              <img src="${favImgSrc}" alt="Star Icon" width="25px">
+            </button>
           </div>`;
 }
 
@@ -279,8 +284,11 @@ function bookLikeRender(i) {
   }
   return `<div class="like">
             <h3>${books[i].likes}</h3>
-            <img onclick="bookLikeCounter(${i})" src="${likeImgSrc}" width="25px" alt="Like">
+            <button class="btn_img" onclick="bookLikeCounter(${i})">
+              <img src="${likeImgSrc}" alt="Like Icon" width="25px">
+            </button>
          </div>`;
+         
 }
 
 function bookLikeCounter(i) {
@@ -298,13 +306,15 @@ function bookDetailRender(i) {
   return `<div class="book_detail">
             <div class="book_detail_in">
               <h4>Author</h4>
-              <h4>Erscheinungsjahr</h4>
-              <h4>Genre</h4>
+              <h4>:${books[i].author}</h4>
             </div>
             <div class="book_detail_in">
-              <h4>: ${books[i].author}</h4>
-              <h4>: ${books[i].publishedYear}</h4>
-              <h4>: ${books[i].genre}</h4>
+              <h4>Erscheinungsjahr</h4>
+              <h4>:${books[i].publishedYear}</h4>
+            </div>
+            <div class="book_detail_in">
+              <h4>Genre</h4>
+              <h4>:${books[i].genre}</h4>
             </div>
         </div>`;
 }
