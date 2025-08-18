@@ -218,6 +218,7 @@ p {
 }
 
 .btn_img {
+  width: fit-content;
   background: none;
   border: none;
   padding: 0;
@@ -247,6 +248,7 @@ footer section {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    padding: 0;
 
 }
 

@@ -210,10 +210,16 @@ function booksRender() {
   let output = document.getElementById("content");
   output.innerHTML = "";
   for (let i = 0; i < books.length; i++) {
-    output.innerHTML += `
+    output.innerHTML += bookFramRender(i);
+  }
+  localStorage.setItem("books", JSON.stringify(books));
+}
+
+function bookFramRender(i){
+  return  `
     <article class="article">
       <div class="book_img">
-        <img src="./assets/img/${books[i].name}.jpg" alt="Buch">
+        <img src="assets/img/${books[i].name}.jpg" alt="Buch">
       </div>
       <h2>${books[i].name}</h2>
       <div class="price_like">
@@ -231,21 +237,19 @@ function booksRender() {
         <label for="comment_text_${i}" class="sr-only">Nachricht</label>
         <input id="comment_text_${i}" class="comment_text" type="text" placeholder="Nachricht eingeben">
         <button class="btn_img" onclick="SendComment(${i})">
-          <img src="./assets/img/icon/Sent.png" alt="send Icon" width="25px">
+          <img src="assets/img/icon/Sent.png" alt="send Icon" width="25px">
         </button>
       </div>
     </article>
     `;
-  }
-  localStorage.setItem("books", JSON.stringify(books));
 }
 
 function bookFavoritesRender(i) {
   let favImgSrc = "";
   if (books[i].favorite == false) {
-    favImgSrc = "./assets/img/icon/Star1.png";
+    favImgSrc = "assets/img/icon/Star1.png";
   } else {
-    favImgSrc = "./assets/img/icon/Star2.png";
+    favImgSrc = "assets/img/icon/Star2.png";
   }
   return `<div>
             <button class="btn_img" onclick="bookFavoritesCounter(${i})">
@@ -278,17 +282,16 @@ function SendComment(i) {
 }
 
 function bookLikeRender(i) {
-  let likeImgSrc = "./assets/img/icon/Like2.png";
+  let likeImgSrc = "assets/img/icon/Like2.png";
   if (books[i].liked == false) {
-    likeImgSrc = "./assets/img/icon/Like.png";
+    likeImgSrc = "assets/img/icon/Like.png";
   }
   return `<div class="like">
             <h3>${books[i].likes}</h3>
             <button class="btn_img" onclick="bookLikeCounter(${i})">
               <img src="${likeImgSrc}" alt="Like Icon" width="25px">
             </button>
-         </div>`;
-         
+         </div>`;       
 }
 
 function bookLikeCounter(i) {

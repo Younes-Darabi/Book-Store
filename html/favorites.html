@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ihre Favoriten: Gemerkte Bücher schnell wiederfinden und bequem vergleichen.">
+    <base href="/">
 
     <title>Favoriten</title>
 
-    <link rel="icon" href="../assets/img/icon/fav.png">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/standard.css">
+    <link rel="icon" href="assets/img/icon/fav.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/standard.css">
 
-    <script src="../assets/script/Favorites.js" defer></script>
+    <script src="assets/script/script.js" defer></script>
+    <script src="assets/script/Favorites.js" defer></script>
 </head>
 
 <body onload="booksFavoritesRender()">
@@ -20,19 +22,19 @@
          <header>
             <section>
                 <div class="logo">
-                    <a href="../index.html">
-                        <img src="../assets/img/icon/bookstore-icon.jpg" alt="Book Store Logo" width="60px">
+                    <a href="index.html">
+                        <img src="assets/img/icon/bookstore-icon.jpg" alt="Book Store Logo" width="60px">
                         <h1>Book Store</h1>
                     </a>
                 </div>
                 <nav class="menu">
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../html/favorites.html">Favoriten</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="html/favorites.html">Favoriten</a></li>
                     </ul>
                     <ul>
                         
-                        <li><a href="../html/book-management.html"><img src="../assets/img/icon/OIP.webp" alt="Management Logo" width="22px"></a></li>
+                        <li><a href="html/book-management.html"><img src="assets/img/icon/OIP.webp" alt="Management Logo" width="22px"></a></li>
                     </ul>
                 </nav>
             </section>
@@ -42,7 +44,7 @@
 
 
         <main>
-            <div id="content" class="content"></div>
+            <div id="content_favorites" class="content"></div>
         </main>
 
         <footer>
@@ -52,8 +54,8 @@
 
                 <nav>
                     <ul class="datenschutz_impressum">
-                        <li><a href="../html/datenschutz.html">Datenschutz</a></li>
-                        <li><a href="../html/impressum.html">Impressum</a></li>
+                        <li><a href="html/datenschutz.html">Datenschutz</a></li>
+                        <li><a href="html/impressum.html">Impressum</a></li>
                     </ul>
                 </nav>
             </section>

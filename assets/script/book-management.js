@@ -13,10 +13,10 @@ function bookManagementRender() {
             <span>${books[i].price}</span>
             <span>${books[i].likes}</span>
             <button class="btn_img" onclick="deleteBook(${i})">
-                <img src="../assets/img/icon/Delete.png" alt="löschen Icon" width="20px">
+                <img src="/assets/img/icon/Delete.png" alt="löschen Icon" width="20px">
             </button>
             <button class="btn_img" onclick="showEditBook(${i})">
-                <img src="../assets/img/icon/Edit.png" alt="Bearbeiten Icon" width="20px">
+                <img src="/assets/img/icon/Edit.png" alt="Bearbeiten Icon" width="20px">
             </button>
         </li>`;
   }
