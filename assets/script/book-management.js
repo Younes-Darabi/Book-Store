@@ -7,16 +7,16 @@ function bookManagementRender() {
     listOfBooks.innerHTML += `
         <li>
             <span>${books[i].name}</span>
-            <span>${books[i].author}</span>
-            <span>${books[i].publishedYear}</span>
-            <span>${books[i].genre}</span>
-            <span>${books[i].price}</span>
-            <span>${books[i].likes}</span>
+            <span class="hidden">${books[i].author}</span>
+            <span class="hidden">${books[i].publishedYear}</span>
+            <span class="hidden">${books[i].genre}</span>
+            <span class="hidden">${books[i].price}</span>
+            <span class="hidden">${books[i].likes}</span>
             <button class="btn_img" onclick="deleteBook(${i})">
-                <img src="/assets/img/icon/Delete.png" alt="löschen Icon" width="20px">
+                <img src="assets/img/icon/Delete.png" alt="löschen Icon" width="20px">
             </button>
             <button class="btn_img" onclick="showEditBook(${i})">
-                <img src="/assets/img/icon/Edit.png" alt="Bearbeiten Icon" width="20px">
+                <img src="assets/img/icon/Edit.png" alt="Bearbeiten Icon" width="20px">
             </button>
         </li>`;
   }

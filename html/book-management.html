@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Impressum: Angaben gemäß § 5 TMG und Kontaktinformationen zum Betreiber dieser Website.">
+    <!-- <base href="/Book-Store/"> -->
     <base href="/">
 
     <title>Buchverwaltung</title>
@@ -36,7 +37,7 @@
                     </ul>
                     <ul>
                         
-                        <li><a href="html/book-management.html"><img src="assets/img/icon/OIP.webp" alt="Management Logo" width="22px"></a></li>
+                        <li><a href="html/book-management.html"><img src="assets/img/icon/OIP.webp" alt="Buchverwaltung öffnen" width="22px"></a></li>
                     </ul>
                 </nav>
             </section>
@@ -45,18 +46,18 @@
         </header>
 
         <main>
-            <section>
+            <section class="sec_list_books">
                 <h2>Liste der Bücher:</h2>
                 <ul>
                     <li class="list_title">
                         <span>Buchtitel</span>
-                        <span>Autor</span>
-                        <span>E-jahr</span>
-                        <span>Genre</span>
-                        <span>Preis(€)</span>
-                        <span>likes</span>
-                        <span>löschen</span>
-                        <span>Bearbeiten</span>
+                        <span class="hidden">Autor</span>
+                        <span class="hidden">E-jahr</span>
+                        <span class="hidden">Genre</span>
+                        <span class="hidden">Preis(€)</span>
+                        <span class="hidden">likes</span>
+                        <span class="hidden">löschen</span>
+                        <span class="hidden">Bearbeiten</span>
                     </li>
                 </ul>
                 <ul id="list_of_books"></ul>
@@ -83,7 +84,7 @@
                         <input id="book_price" type="text">
 
                         <div class="div_btn">
-                            <button class="btn_add" onclick="addNewBook()">hinzufügen</button>
+                            <button class="btn_add_edit" onclick="addNewBook()">hinzufügen</button>
                         </div>
 
                     </form>
@@ -110,7 +111,7 @@
                         <input id="edit_book_price" type="text">
 
                         <div class="div_btn">
-                            <button class="btn_add" onclick="editBook()">Bearbeiten</button>
+                            <button class="btn_add_edit" onclick="editBook()">Bearbeiten</button>
                         </div>
 
                     </form>

@@ -221,7 +221,9 @@ function bookFramRender(i){
       <div class="book_img">
         <img src="assets/img/${books[i].name}.jpg" alt="Buch">
       </div>
-      <h2>${books[i].name}</h2>
+      <div class="book_name">
+        <h2>${books[i].name}</h2>
+      </div>
       <div class="price_like">
         <h3>${books[i].price} €</h3>
         ${bookLikeRender(i)}

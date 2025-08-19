@@ -4,7 +4,7 @@ h2 {
     color: black;
 }
 
-input{
+input {
     height: 20px;
     border: 1px solid rgb(187, 100, 100);
     border-radius: 3px;
@@ -36,6 +36,8 @@ main section {
 
 .sec_add_edit {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     background: none;
     padding: 0;
@@ -64,13 +66,65 @@ form {
     border-radius: 5px;
 }
 
-.btn_add{
+.btn_add_edit {
     margin-top: 5px;
     padding: 5px 20px;
+    cursor: pointer;
 }
 
-.div_btn{
+.div_btn {
     display: flex;
     justify-content: end;
-    cursor: pointer;
+
+}
+
+@media(max-width:1700px) {
+    .hidden {
+        display: none;
+    }
+
+    main li {
+        grid-template-columns: 220px 30px 30px;
+    }
+}
+
+@media(max-width:510px) {
+    .hidden {
+        display: none;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sec_list_books{
+        width: 98%;
+    }
+
+    .sec_add_edit {
+        flex-direction: column;
+        align-items: center;
+        width: 91%;
+    }
+
+    .book_add {
+        width: 100%;
+        padding: 10px 20px 20px 20px;
+
+    }
+
+    .book_edit {
+        width: 100%;
+        padding: 10px 20px 20px 20px;
+    }
+
+    main li {
+        grid-template-columns: 210px 30px 30px;
+    }
+
+    main section {
+        padding: 5px 10px 10px 8px;
+        
+    }
 }
