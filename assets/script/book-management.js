@@ -87,6 +87,7 @@ function addNewBook() {
     "genre": genre,
     "comments": [],
     "favorite": false,
+    
   });
 
   bookManagementRender();

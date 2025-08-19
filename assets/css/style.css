@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #FCFCFA;
+    background-color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,14 +21,14 @@ body {
 }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 a {
@@ -56,6 +56,14 @@ header section {
     justify-content: space-between;
 }
 
+.menu li{
+    transition: scale 250ms ease-in-out;
+}
+
+.menu li:hover{
+    scale: 1.1;
+}
+
 .menu ul {
     list-style: none;
     display: flex;
@@ -66,11 +74,9 @@ header section {
 
 .logo {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.logo a{
-    text-align: center;
 }
 
 h1 {
@@ -113,7 +119,7 @@ main {
     border-radius: 3px;
 }
 
-.book_name{
+.book_name {
     width: 90%;
     display: flex;
     justify-content: left;
@@ -160,6 +166,14 @@ h4 {
     align-items: center;
 }
 
+.favorite_like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+
 .like {
     display: flex;
     justify-content: center;
@@ -197,14 +211,14 @@ h5 {
     font-size: 14px;
     margin: 3px 0;
     font-weight: 600;
-    color: #686767
+    color: #595959
 }
 
 p {
     font-size: 14px;
     margin: 3px 0;
     font-weight: 500;
-    color: #686767
+    color: #595959
 }
 
 .send_comment {
@@ -218,18 +232,39 @@ p {
 .comment_text {
     width: 90%;
     border: 1px solid #dbdada;
+    outline: none;
     border-radius: 3px;
-    height: 20px;
+    height: 24px;
+    padding: 0 5px ;
+    color: #595959;
+}
+
+.empty_text{
+    border: 2px solid rgb(180, 0, 0);
+    color: rgb(180, 0, 0);
 }
 
 .btn_img {
-  width: fit-content;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  outline: none;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    transition: scale 300ms ease-in-out;
 }
+
+.btn_img:hover{
+    scale: 1.1;
+}
+
+button:focus-visible,a:focus-visible,input:focus-visible {
+  outline: 1px solid dodgerblue;
+  border-radius: 5px;
+}
+
 
 /* ---Footer */
 
@@ -254,14 +289,21 @@ footer section {
     justify-content: center;
     gap: 20px;
     padding: 0;
-
 }
 
 .datenschutz_impressum a {
     font-size: 14px;
     margin: 3px 0;
     font-weight: 500;
-    color: #686767
+    color: #595959
+}
+
+.datenschutz_impressum li{
+    transition: scale 250ms ease-in-out;
+}
+
+.datenschutz_impressum li:hover{
+    scale: 1.1;
 }
 
 /* ---Responsiv */
