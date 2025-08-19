@@ -46,13 +46,11 @@ function SendComment(i) {
     booksRender();
   } else {
     comment.classList.add('empty_text');
-    document.getElementById(`comment_text_${i}`).value= "Bitte Nachricht eingeben!";
   }
 }
 
 function errorStyleRemover(i){
   document.getElementById(`comment_text_${i}`).classList.remove('empty_text')
-  document.getElementById(`comment_text_${i}`).value= "";
 }
 
 function bookLikeRender(i) {

@@ -15,20 +15,20 @@ function bookFavoritesCounter(i) {
   } else {
     books[i].favorite = false;
   }
-  booksFavoritesRender()();
+  booksFavoritesRender();
 }
 
 function SendComment(i) {
-  let comment = document.getElementById(`comment_text_${i}`).value;
-  if (comment) {
+  let comment = document.getElementById(`comment_text_${i}`);
+  if (comment.value) {
     books[i].comments.push({
       name: "Younes",
-      comment: comment,
+      comment: comment.value,
     });
     comment.value = "";
-    booksFavoritesRender()();
+    booksFavoritesRender();
   } else {
-    alert("Bitte geben Sie Ihre Nachricht ein");
+    comment.classList.add('empty_text');
   }
 }
 
@@ -40,6 +40,6 @@ function bookLikeCounter(i) {
     books[i].liked = false;
     books[i].likes--;
   }
-  booksFavoritesRender()();
+  booksFavoritesRender();
 }
 
